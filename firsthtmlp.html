@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Profile</title>
+
+<style>
+body{font-family:Arial;text-align:center;background:#eef;}
+.card{background:#fff;margin:20px auto;padding:15px;width:270px;
+border-radius:10px;box-shadow:0 0 10px gray;text-align:left;}
+button{margin:5px;padding:8px;border:none;background:blue;color:#fff;}
+</style>
+
+<script>
+function show(n,r,c,b,a,m,cp,e,p,mat){
+document.getElementById("p").innerHTML=
+`<div class=card>
+<h3>${n}</h3>
+<p>Roll: ${r}</p>
+<p>Class: ${c}</p>
+<p>Branch: ${b}</p>
+<p>Attendance: ${a}%</p>
+<p>Marks: ${m}</p>
+<p>CPI: ${cp}</p>
+<p>Email: ${e}</p>
+<p>Phone: ${p}</p>
+<p>Material: ${mat}</p>
+<p>Status: ${m>=40?"Pass":"Fail"}</p>
+</div>`;
+}
+</script>
+</head>
+
+<body>
+
+<h2>🎓 Student List</h2>
+
+<button onclick="show('Rahul',101,'CE-A','CE',80,75,7.5,'rahul@gmail.com','9876543210','Notes')">Rahul</button>
+
+<button onclick="show('Priya',102,'CE-B','CE',90,85,8.2,'priya@gmail.com','9876501234','Books')">Priya</button>
+
+<button onclick="show('Amit',103,'CE-A','CE',70,60,6.8,'amit@gmail.com','9876512340','PDF')">Amit</button>
+
+<div id="p"></div>
+
+</body>
+</html>
